@@ -1,6 +1,9 @@
-<h1>editor</h1>
-
-<angular-editor [placeholder]="'Enter text here...'" [config]="editorConfig" [(ngModel)]="htmlContent"></angular-editor>
-<h2>html content</h2>
-{{htmlContent}}
-
+<div>
+    <textarea [(ngModel)]="htmlCode" style="height: 150px;width:500px" ></textarea>
+    <button (click)="convertHtmlToText()">HTML to Text</button>
+  </div>
+  
+  <div>
+    <p [innerHTML]="plainText"></p>
+  </div>
+  
